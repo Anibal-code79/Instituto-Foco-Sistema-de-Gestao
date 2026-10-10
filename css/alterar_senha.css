@@ -1,0 +1,154 @@
+body {
+    background: linear-gradient(160deg, #fff5f5 0%, #f5f5f5 60%);
+}
+
+
+.senha-container {
+    max-width: 460px;
+    margin: 50px auto 60px;
+    padding: 0 20px;
+}
+
+.senha-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 45px 40px;
+    box-shadow: 0 8px 30px rgba(179, 0, 0, 0.08);
+    border-top: 4px solid #b30000;
+}
+
+
+/* ÍCONE */
+
+.senha-icone {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fdecea;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    margin: 0 auto 20px;
+}
+
+
+/* TÍTULO */
+
+.senha-card h1 {
+    text-align: center;
+    font-size: 21px;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.senha-card > p {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   CAMPOS
+======================================== */
+
+.senha-card .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.senha-card label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.senha-card input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1.5px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 14.5px;
+    transition: 0.2s;
+    background: #fafafa;
+}
+
+.senha-card input:focus {
+    outline: none;
+    border-color: #b30000;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(179, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   INDICADOR DE FORÇA (visual simples) */
+
+.senha-dica {
+    font-size: 12px;
+    color: #999;
+    margin-top: 6px;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.senha-card .btn-primary {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 14px rgba(179, 0, 0, 0.25);
+}
+
+.senha-card .btn-primary:hover {
+    box-shadow: 0 6px 18px rgba(179, 0, 0, 0.35);
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   ALERTAS
+======================================== */
+
+.senha-card .alerta-erro,
+.senha-card .alerta-sucesso {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    padding: 12px 15px;
+    margin-bottom: 22px;
+}
+
+.senha-card .alerta-sucesso {
+    background: #eafaf0;
+    color: #198754;
+    border: 1px solid #c3ecd3;
+}
+
+.senha-card .alerta-erro {
+    background: #fdecea;
+    color: #b30000;
+    border: 1px solid #f5c6c2;
+}
+
+
+@media (max-width: 500px) {
+    .senha-card {
+        padding: 32px 24px;
+    }
+}

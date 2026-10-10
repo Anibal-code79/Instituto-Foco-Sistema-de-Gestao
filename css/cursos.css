@@ -1,0 +1,355 @@
+:root {
+    --vermelho: #c62828;
+    --vermelho-hover: #a91f1f;
+    --verde: #198754;
+    --branco: #ffffff;
+    --fundo: #f5f6f8;
+    --texto: #222222;
+    --texto-secundario: #6c757d;
+    --borda: #dee2e6;
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --radius: 8px;
+}
+
+
+/* CONTEÚDO */
+
+.main-content {
+    min-height: 100vh;
+    padding: 30px;
+    background: var(--fundo);
+}
+
+
+/* CABEÇALHO */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    color: var(--texto);
+    font-size: 28px;
+}
+
+.page-header p {
+    margin: 0;
+    color: var(--texto-secundario);
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.btn-primary {
+    border: none;
+    border-radius: var(--radius);
+    padding: 11px 18px;
+    background: var(--vermelho);
+    color: var(--branco);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--vermelho-hover);
+}
+
+
+/* CARD */
+
+.content-card {
+    padding: 20px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+    box-shadow: var(--sombra);
+}
+
+
+/* PESQUISA */
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    padding: 0 12px;
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+    outline: none;
+}
+
+.search-container input:focus {
+    border-color: var(--vermelho);
+}
+
+
+/* TABELA */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#tabelaCursos {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+#tabelaCursos th {
+    padding: 13px;
+    background: #f8f9fa;
+    border-bottom: 1px solid var(--borda);
+    text-align: left;
+    font-size: 13px;
+}
+
+#tabelaCursos td {
+    padding: 13px;
+    border-bottom: 1px solid var(--borda);
+    font-size: 14px;
+}
+
+#tabelaCursos tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* ESTADOS */
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.ativo {
+    background: #d1e7dd;
+    color: #146c43;
+}
+
+.status.inativo {
+    background: #f8d7da;
+    color: #842029;
+}
+
+
+/* AÇÕES */
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 7px 11px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-edit {
+    background: #e9ecef;
+    color: #343a40;
+}
+
+.btn-delete {
+    background: #f8d7da;
+    color: #842029;
+}
+
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 550px;
+
+    background: var(--branco);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* MODAL HEADER */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 20px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.modal-header h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.modal-header p {
+    margin: 0;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+.modal-close {
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* FORMULÁRIO */
+
+#formCurso {
+    padding: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--vermelho);
+}
+
+
+/* RODAPÉ */
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--borda);
+}
+
+.btn-secondary {
+    border: none;
+    border-radius: var(--radius);
+    padding: 11px 18px;
+    background: #e9ecef;
+    cursor: pointer;
+}
+
+
+/* VAZIO */
+
+.empty-state {
+    padding: 40px !important;
+    text-align: center;
+    color: var(--texto-secundario);
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .content-card {
+        padding: 12px;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    #formCurso {
+        padding: 15px;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+    }
+
+    .modal-footer button {
+        width: 100%;
+    }
+
+}
